@@ -9,11 +9,12 @@ export default defineConfig({
     vue(),
     federation({
       name: 'host-vue3',
-      filename: 'remoteEntry.js',
       remotes: {
         'remote-vue3': 'http://localhost:3011/assets/remoteEntry.js',
+        'remote-react': 'http://localhost:3021/assets/remoteEntry.js',
       },
-      shared: ['vue'],
+      // shared: ['vue'],
+      shared: ['vue', 'react', 'react-dom'],
     }),
   ],
   server: {

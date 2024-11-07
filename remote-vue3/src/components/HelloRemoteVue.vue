@@ -5,10 +5,7 @@ defineProps<{ msg?: string }>();
 <template>
   <div class="greetings">
     <h1>{{ msg }}</h1>
-    <h3>
-      테스트중 Vite + Vue 3
-      <div style="color: #f00">What's next? 3</div>
-    </h3>
+    <h3>vue3 컴포넌트</h3>
   </div>
 </template>
 

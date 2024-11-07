@@ -11,7 +11,7 @@ export default defineConfig({
       name: 'remote-vue3',
       filename: 'remoteEntry.js',
       exposes: {
-        './HelloSome1': './src/components/HelloSome1.vue',
+        './HelloRemoteVue': './src/components/HelloRemoteVue.vue',
       },
       shared: ['vue'],
     }),
