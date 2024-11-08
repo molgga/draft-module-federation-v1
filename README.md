@@ -23,8 +23,16 @@ remote-vue3
   pnpm preview
 
 # 위에 리모트 서버들 켠 후
+
 # Vue3 호스트 서버 켜기 # http://localhost:3001
 host-vue3
+  pnpm install
+  pnpm dev
+
+
+# 위에 리모트 서버들 켠 후
+# React 호스트 서버 켜기 # http://localhost:3002
+host-react
   pnpm install
   pnpm dev
 

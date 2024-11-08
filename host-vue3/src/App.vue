@@ -17,6 +17,7 @@
 
 <script lang="ts" setup>
 import { defineAsyncComponent, onMounted, shallowRef } from 'vue';
+import React from 'react';
 import { createRoot } from 'react-dom/client';
 import ErrorComponent from './components/ErrorComponent.vue';
 import HelloHostVue from './components/HelloHostVue.vue';
@@ -45,8 +46,13 @@ onMounted(async () => {
   );
   if (HelloRemoteReact) {
     createRoot(refRenderToReactApp.value!).render(
-      HelloRemoteReact.default({ msg: 'React remote!!' })
+      React.createElement(HelloRemoteReact.default, {
+        msg: 'React remote!!!',
+      })
     );
+    // createRoot(refRenderToReactApp.value!).render(
+    //   HelloRemoteReact.default({ msg: 'React remote!!' }) // hooks rule 오류
+    // );
   }
 });
 </script>
