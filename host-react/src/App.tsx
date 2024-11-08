@@ -15,6 +15,10 @@ const router = createBrowserRouter(
       children: [
         { index: true, lazy: () => import('./pages/HomeView') },
         { path: 'page-with-vue', lazy: () => import('./pages/PageWithVue') },
+        {
+          path: 'page-with-react',
+          lazy: () => import('./pages/PageWithReact'),
+        },
       ],
     },
   ],
@@ -39,6 +43,9 @@ export function DefaultLayout(props: { children?: React.ReactNode }) {
         </Link>
         <Link style={{ padding: '10px' }} to="/page-with-vue">
           /page-with-vue
+        </Link>
+        <Link style={{ padding: '10px' }} to="/page-with-react">
+          /page-with-react
         </Link>
       </div>
       <div>{props?.children || <Outlet />}</div>

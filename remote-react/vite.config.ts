@@ -11,6 +11,7 @@ export default defineConfig({
       filename: 'remoteEntry.js',
       exposes: {
         './HelloRemoteReact': './src/components/HelloRemoteReact.tsx',
+        './PageRemoteReact': './src/components/PageRemoteReact.tsx',
       },
       shared: ['react', 'react-dom'],
     }),

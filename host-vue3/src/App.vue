@@ -5,6 +5,9 @@
       <RouterLink class="navi-btn" to="/page-with-vue">
         page-with-vue
       </RouterLink>
+      <RouterLink class="navi-btn" to="/page-with-react">
+        page-with-react
+      </RouterLink>
     </div>
     <div>
       <h1>Vue Host App</h1>
