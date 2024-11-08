@@ -1,9 +1,7 @@
 # Module Federation 테스트용
 
-SSR 아닌것만 테스트
-
+- host-react: 호스트 React
 - host-vue3: 호스트 Vue3
-- @TODO: host-react: 호스트 React
 - remote-react: 리모트 React
 - remote-vue3: 리모트 Vue3
 
