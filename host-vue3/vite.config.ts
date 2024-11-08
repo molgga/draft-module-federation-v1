@@ -13,7 +13,18 @@ export default defineConfig({
         'remote-vue3': 'http://localhost:3011/assets/remoteEntry.js',
         'remote-react': 'http://localhost:3021/assets/remoteEntry.js',
       },
-      shared: ['vue', 'react', 'react-dom', '@vueuse/core', '@jood/v-modal'],
+      shared: [
+        'vue',
+        'react',
+        'react-dom',
+        /**
+         * ! https://github.com/originjs/vite-plugin-federation/issues/495
+         * ! https://github.com/originjs/vite-plugin-federation/issues/334
+         * @TODO vue 리모트 쪽 반응성을 잃는것 때문에 우선 remote, host 쪽에 shared 처리.
+         */
+        '@vueuse/core',
+        '@jood/v-modal',
+      ],
     }),
   ],
   server: {

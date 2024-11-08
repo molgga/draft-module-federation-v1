@@ -36,6 +36,22 @@ host-react
 
 ```
 
+---
+
+```
+@TODO: vue library shared 문제
+! https://github.com/originjs/vite-plugin-federation/issues/495
+! https://github.com/originjs/vite-plugin-federation/issues/334
+
+vue 리모트 쪽에서 "@vueuse/core" 같은 라이브러리를 사용한 후,
+expose/remote 동작은 문제없지만 host 에서 가져온 remote 의 라이브러리들 반응성을 잃는것 같음.
+해당 라이브러리 들을 shared 로 빼주고(host 에선 해당 라이브러리를 설치..) host 에서 remote 컴포넌트 가져와보면 mouse state 가 바로 리렌더링 됨.
+(ex: shared 시키지 않은 경우 remote 에서 useMouse 를 사용한 컴포넌트를 host 에서 가져오면 화면에 리렌더링이 바로바로 안됨)
+shared 말고 다른 방법 찾아봐야함.
+```
+
+---
+
 ..SSR 환경은 더 살펴본 후에...
 
 - nextjs app 라우터 관련 이슈: https://github.com/module-federation/core/issues/1183#issuecomment-2003744775
