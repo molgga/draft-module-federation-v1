@@ -1,15 +1,29 @@
-<script setup lang="ts">
-defineProps<{ msg?: string }>();
-</script>
-
 <template>
   <div class="greetings">
     <h1>{{ msg }}</h1>
     <h3>vue3 컴포넌트</h3>
+    <div>
+      <div><button @click="onIncrease">count</button></div>
+      <div>count: {{ state.count }}</div>
+    </div>
   </div>
 </template>
 
-<script lang="ts" setup></script>
+<script setup lang="ts">
+import { reactive } from 'vue';
+
+interface Props {
+  msg?: string;
+}
+
+const props = defineProps<Props>();
+const state = reactive({
+  count: 0,
+});
+const onIncrease = () => {
+  state.count++;
+};
+</script>
 
 <!-- <style scoped src="./hello-some1.css"></style> -->
 <!-- <style >
