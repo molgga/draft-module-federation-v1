@@ -13,7 +13,14 @@ export default defineConfig({
         'remote-vue3': 'http://localhost:3011/assets/remoteEntry.js',
         'remote-react': 'http://localhost:3021/assets/remoteEntry.js',
       },
-      shared: ['vue', 'react', 'react-dom'],
+      shared: [
+        'vue',
+        '@vueuse/core',
+        '@jood/v-modal',
+        '@jood/v-colrow',
+        'react',
+        'react-dom',
+      ],
     }),
   ],
   server: {

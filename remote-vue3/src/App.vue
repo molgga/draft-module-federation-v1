@@ -1,14 +1,11 @@
 <template>
   <div>
-    <div><h1>Vue3 App</h1></div>
-    <div>
-      <HelloRemoteVue msg="Hello Remote Vue" />
-    </div>
+    <RouterView />
   </div>
 </template>
 
 <script lang="ts" setup>
-import HelloRemoteVue from './components/HelloRemoteVue.vue';
+import { RouterView } from 'vue-router';
 </script>
 
 <style lang="scss" scoped></style>

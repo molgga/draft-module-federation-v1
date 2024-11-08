@@ -9,6 +9,10 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+
+    "strict": false,
+    "strictNullChecks": false,
+    "verbatimModuleSyntax": false
   }
 }
